@@ -40,4 +40,15 @@ class Template
         include $__TEMPLATE__;
         return ob_get_clean();
     }
+
+
+    /**
+     * @param string $__TEMPLATE__
+     * @param array $__DATA__
+     * @throws Exception
+     */
+    public static function display(string $__TEMPLATE__, array $__DATA__ = [])
+    {
+        echo static::render($__TEMPLATE__, $__DATA__);
+    }
 }
